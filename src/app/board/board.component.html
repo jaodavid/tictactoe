@@ -1,5 +1,5 @@
-<h2>Current Player: {{ player }}</h2>
-<p>
+<h3 class="textCenter">Current Player: {{ player }}</h3>
+<p class="textCenter">
     <button 
         nbButton outline 
         status="danger" 
@@ -7,9 +7,6 @@
             New Game
     </button>
 </p>
-<h3 *ngIf="winner">
-    Player {{ winner }} won the game!
-</h3>
 
 <main>
     <app-square
@@ -18,3 +15,7 @@
         (click)="makeMove(i)">
     </app-square>
 </main>
+
+<h4 *ngIf="winner" class="textCenter">
+    Player {{ winner }} won the game!
+</h4>
